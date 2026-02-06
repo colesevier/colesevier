@@ -1,0 +1,27 @@
+---
+const projects = [
+  {
+    name: "Autonomous Marketing Agent",
+    description: "Agentic AI system for planning, launching, and optimizing campaigns.",
+  },
+  {
+    name: "Federated Learning Pipeline",
+    description: "End-to-end federated LSTM training for telecom forecasting.",
+  },
+];
+---
+
+<html lang="en">
+  <body class="bg-black text-white px-6 py-16">
+    <h1 class="text-4xl font-bold">Projects</h1>
+
+    <ul class="mt-8 space-y-6">
+      {projects.map(p => (
+        <li>
+          <h2 class="text-xl font-semibold">{p.name}</h2>
+          <p class="text-neutral-400">{p.description}</p>
+        </li>
+      ))}
+    </ul>
+  </body>
+</html>
