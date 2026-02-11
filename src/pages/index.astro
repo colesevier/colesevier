@@ -22,8 +22,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <div class="right">
-      <!-- Replace with your image -->
-      <img src="/profile.jpg" alt="Cole Sevier" />
+        <img src="/profile.jpg" alt="Cole Sevier" class="profile-image" />
     </div>
   </section>
 </Layout>
@@ -99,4 +98,18 @@ h1 {
 .social a:hover {
   color: #111;
 }
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 480px;
+  max-width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
 </style>
