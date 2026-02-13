@@ -8,11 +8,13 @@ import Layout from '../layouts/Layout.astro';
       <h1>Cole Sevier</h1>
       <p class="subtitle">A little about me.</p>
 
-      <div class="buttons">
-        <a href="/projects" class="btn">Projects</a>
-        <a href="/about" class="btn">About</a>
-        <a href="/contact" class="btn">Contact</a>
+      <div class="grid-buttons">
+        <a href="/about" class="grid-btn">About Me</a>
+        <a href="/projects" class="grid-btn">Projects</a>
+        <a href="/principles" class="grid-btn">Principles</a>
+        <a href="/personal" class="grid-btn">Personal</a>
       </div>
+
 
       <div class="social">
         <a href="https://github.com/colesevier" target="_blank">GitHub</a>
@@ -59,25 +61,30 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.buttons {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
+.grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 700px;
 }
 
-.btn {
-  border: 1px solid #ddd;
-  padding: 0.7rem 1.4rem;
-  border-radius: 6px;
+.grid-btn {
+  background: #e6e4df; /* light grey */
+  padding: 1.6rem 2rem;
+  text-align: center;
   text-decoration: none;
+  color: #2b2118;
   font-weight: 500;
+  border-radius: 4px;
   transition: all 0.2s ease;
+  font-size: 0.95rem;
 }
 
-.btn:hover {
-  background: #111;
-  color: white;
+.grid-btn:hover {
+  background: #d1cec8; /* darker grey */
 }
+
 
 .social {
   display: flex;
