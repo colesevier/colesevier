@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BackHome from '../components/BackHome.astro';
+---
+
+<Layout title="Gallery">
+  <BackHome />
+
+  <section class="gallery">
+    <h1>Gallery</h1>
+
+    <div class="grid">
+      <img src="/photos/photo1.jpg" alt="Photo 1" />
+      <img src="/photos/photo2.jpg" alt="Photo 2" />
+      <img src="/photos/photo3.jpg" alt="Photo 3" />
+      <img src="/photos/photo4.jpg" alt="Photo 4" />
+    </div>
+  </section>
+</Layout>
+
+<style>
+.gallery {
+  padding: 6rem 8%;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.02);
+}
+</style>

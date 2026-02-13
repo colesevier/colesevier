@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BackHome from '../components/BackHome.astro';
+---
+
+<Layout title="Principles">
+  <BackHome />
+
+  <section class="content">
+    <h1>Principles</h1>
+
+    <div class="principle">
+      <h2>First Principles Thinking</h2>
+      <p>
+        Reduce problems to their fundamental components.
+        Rebuild from constraints rather than assumptions.
+      </p>
+    </div>
+
+    <div class="principle">
+      <h2>Systems Over Hacks</h2>
+      <p>
+        Build durable systems instead of one-off optimizations.
+        Compounding > cleverness.
+      </p>
+    </div>
+
+    <div class="principle">
+      <h2>Clarity Over Complexity</h2>
+      <p>
+        If it can’t be explained simply, it isn’t understood deeply.
+      </p>
+    </div>
+
+    <div class="principle">
+      <h2>Long-Term Orientation</h2>
+      <p>
+        Optimize for skill accumulation and asymmetric upside.
+      </p>
+    </div>
+
+  </section>
+</Layout>
+
+<style>
+.content {
+  max-width: 750px;
+  margin: 6rem auto;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.principle {
+  margin-bottom: 3rem;
+}
+
+.principle h2 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 2px;
+}
+
+.principle p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #3a3128;
+}
+</style>
