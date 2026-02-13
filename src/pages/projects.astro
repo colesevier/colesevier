@@ -1,27 +1,123 @@
 ---
-const projects = [
-  {
-    name: "Autonomous Marketing Agent",
-    description: "Agentic AI system for planning, launching, and optimizing campaigns.",
-  },
-  {
-    name: "Federated Learning Pipeline",
-    description: "End-to-end federated LSTM training for telecom forecasting.",
-  },
-];
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-  <body class="bg-black text-white px-6 py-16">
-    <h1 class="text-4xl font-bold">Projects</h1>
+<Layout title="Projects">
+  <section class="wrapper">
 
-    <ul class="mt-8 space-y-6">
-      {projects.map(p => (
+    <!-- LEFT COLUMN -->
+    <div class="column">
+      <h1 class="section-title">PROJECTS</h1>
+      <div class="divider"></div>
+
+      <ul class="project-list">
         <li>
-          <h2 class="text-xl font-semibold">{p.name}</h2>
-          <p class="text-neutral-400">{p.description}</p>
+          <a href="https://github.com/colesevier/high-performance-string-search" target="_blank">
+            High Performance String Search
+          </a>
         </li>
-      ))}
-    </ul>
-  </body>
-</html>
+
+        <li>
+          <a href="https://github.com/colesevier/iot-step-tracker" target="_blank">
+            IoT Step Tracker
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/colesevier/OpenFedLLM" target="_blank">
+            OpenFedLLM
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/colesevier/campaign-agent" target="_blank">
+            Campaign Agent
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="column">
+      <h1 class="section-title">COURSEWORK</h1>
+      <div class="divider"></div>
+
+      <h2 class="subheading">COMPUTER SCIENCE</h2>
+      <ul>
+        <li><a href="https://catalogue.usc.edu/preview_course_nopop.php?catoid=16&coid=250234" target="_blank">CS 103</a></li>
+        <li><a href="https://catalogue.usc.edu/preview_course_nopop.php?catoid=16&coid=250238" target="_blank">CS 170</a></li>
+        <li><a href="https://catalogue.usc.edu/preview_course_nopop.php?catoid=14&coid=217140" target="_blank">CS 104</a></li>
+        <li><a href="https://catalogue.usc.edu/preview_course_nopop.php?catoid=16&coid=250239" target="_blank">CS 201</a></li>
+        <li><a href="https://catalogue.usc.edu/preview_course_nopop.php?catoid=16&coid=250240" target="_blank">CS 270</a></li>
+      </ul>
+
+      <h2 class="subheading">ELECTRICAL ENGINEERING</h2>
+      <ul>
+        <li><a href="https://catalogue.usc.edu/preview_course_nopop.php?catoid=8&coid=117806" target="_blank">EE 109</a></li>
+        <li><a href="https://catalogue.usc.edu/preview_course_nopop.php?catoid=16&coid=253917" target="_blank">EE 250</a></li>
+        <li><a href="https://catalogue.usc.edu/preview_course_nopop.php?catoid=16&coid=253134" target="_blank">EE 354</a></li>
+      </ul>
+
+      <h2 class="subheading">MATHEMATICS</h2>
+      <ul>
+        <li><a href="https://catalogue.usc.edu/preview_course_nopop.php?catoid=18&coid=279730" target="_blank">MATH 407</a></li>
+        <li><a href="https://dornsife.usc.edu/mathematics/math-226-calculus-3/" target="_blank">MATH 226</a></li>
+        <li><a href="https://catalogue.usc.edu/preview_course_nopop.php?catoid=20&coid=319359" target="_blank">MATH 126</a></li>
+      </ul>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+.wrapper {
+  display: flex;
+  gap: 6rem;
+  padding: 4rem 8%;
+  min-height: 90vh;
+}
+
+.column {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  letter-spacing: 6px;
+  font-weight: 600;
+}
+
+.divider {
+  height: 1px;
+  background: #ddd;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.subheading {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  letter-spacing: 4px;
+  color: #666;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+</style>
