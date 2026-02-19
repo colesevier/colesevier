@@ -6,21 +6,89 @@ import BackHome from '../components/BackHome.astro';
 <Layout title="About">
   <BackHome />
 
-  <!-- page content here -->
+  <section class="about-wrapper">
+
+    <!-- LEFT COLUMN -->
+    <div class="about-left">
+      <h1 class="about-title">ABOUT ME</h1>
+
+      <p>
+        I was born in El Cajon, California and moved to Bellevue, Washington
+        before starting school. I grew up swimming and competed throughout
+        middle and high school on both my high school and club teams.
+      </p>
+
+      <p>
+        I graduated from Bellevue High School in 2024 and now study Computer
+        Engineering and Computer Science at USC, where I conduct research in
+        AI for robotics and computer vision through CAIS++.
+      </p>
+
+      <p>
+        Recently, I interned at Infosys in their Emerging Technologies division.
+        I worked under the Senior Technology Architect to research and develop
+        AI proof-of-concepts leveraging Federated Learning for more efficient
+        and privacy-preserving model training.
+      </p>
+
+      <p>
+        During that time, I traveled to Sri Lanka, the Andaman Islands, and
+        multiple cities across India. Travel sharpened my adaptability and
+        reinforced that curiosity fuels technical creativity.
+      </p>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="about-right">
+      <img src="/usc-logo.png" alt="USC" class="about-logo" />
+      <img src="/cais-logo.png" alt="CAIS++" class="about-logo" />
+      <img src="/infosys-logo.png" alt="Infosys" class="about-logo" />
+    </div>
+
+  </section>
 </Layout>
 
+<style>
+.about-wrapper {
+  display: flex;
+  gap: 8rem;
+  padding: 6rem 8%;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
 
-<html lang="en">
-  <body class="bg-black text-white px-6 py-16 max-w-2xl">
-    <h1 class="text-4xl font-bold">About</h1>
-    <p class="mt-6 text-neutral-300 leading-relaxed">
-      Analytical and experimental with a bias to action; I spot my conversations with humor, 
-      and I thrive in high-stress environments. Whether helping launch a $27,000 fundraiser 
-      for homeless families to drive a 300% increase from previous years or developing 
-      gut-oriented biosensors for real-world use, I thrive where mission meets momentum. Last
-      summer, I interned at Infosys through its InStep program, where I worked on 
-      industry-oriented projects. I’m energized by people who think differently and build 
-      boldly.
-    </p>
-  </body>
-</html>
+.about-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-title {
+  letter-spacing: 6px;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.about-left p {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  color: #4a4138;
+  font-size: 1rem;
+}
+
+.about-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about-logo {
+  max-width: 280px;
+  width: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+}
+</style>
